@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.typekit.net/pti7roa.css">
+  </head>
+  
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/theme/material-ocean.css">
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content" id="modelContent">
+        <span class="modalClose">&times;</span>
+        <p id="modalText">Half of the time I dont know what I am doing.</p>
+      </div>
+    
+    </div>
+    <div id="infoModal" class="modal">
+      <div class="modal-content" id="infoModalContent">
+        <span id="infoModalClose" class="modalClose">&times;</span>
+        <div style="height:10px;"></div>
+        <p style="text-align:center;border-bottom: 2px solid #149fd6; width: 200px;margin:auto;"id="infoModalText"><b>DISCLAIMER</b><br></p>
+        <p style= "text-align:center;">This website and its creator are not affiliated with Mojang AB.</p>
+        <div style="height:40px;"></div>
+        <p style="text-align:center;border-bottom: 2px solid #149fd6; width: 200px;margin:auto;"><b>CREDIT</b><br></p>
+        <p style= "text-align:center;">This website is made by Ancientkingg.</p>
+        <p style= "text-align:center;transform:skewX(-15deg);">I don't have any socials lol.</p>
+        
+          <div class="discordSocial"></div>
+          <div class="discordSocialTag"><p>Ancientkingg#0420</p></div>
+
+      </div>
+    
+    </div>
+    <div class="styles" style="height:40px;"></div> 
+    <div style="float: right;right: 10vh; position:relative;">
+      <textarea rows="4"id="editor"></textarea>
+    </div>
+  <div class="styles" style="position:relative;top:270px;left:-7vh;height:250px;">
+    
+    <div class="styles" id="question" style="position:absolute;height:100px; color: #00b7ff; top:-150px;">
+    <p style="font-family: 'Muli'; font-weight: bold;border-bottom: 2px solid;padding-left:20px;padding-right:20px;padding-bottom:4px;">Please select the type of shader template</p>
+    <section class="dark">
+  
+      <label class="radioButton">
+        <input type="radio" id="defaultShaderTemplate" name="shaderType" value="rendertype_solid" checked>
+        <span class="design"></span>
+        <span class="text">rendertype_solid</span>
+      </label>
+      <label class="radioButton">
+        <input type="radio" name="shaderType" value="rendertype_entity_cutout">
+        <span class="design"></span>
+        <span class="text">rendertype_entity_cutout</span>
+      </label>
+      <label class="radioButton">
+        <input type="radio" name="shaderType" value="other">
+        <span class="design"></span>
+        <span class="text">other</span>
+      </label>
+      
+    </section>
+    </div>
+    <div id="question2" class="invisible styles" style="position:absolute;height:250px; color: #00b7ff;top:150px;">
+      <p style="font-family: 'Muli'; font-weight: bold;border-bottom: 2px solid;padding-left:20px;padding-right:20px;padding-bottom:4px;">Please input the name of your shader</p>
+        <label class="shaderName">
+          <input type="text" id="shaderName" name="shaderName" spellcheck="false" required pattern="\S+" />
+        </label>       
+      </div>
+      <a id="zipButton" href="#"><p ><span class="bg"></span><span class="base"></span><span class="text">Download</span></p></a>
+      <input type="file" name="imageLoader" id="imageLoader" accept="image/png">
+        <div id="bottomBar">
+          <label id="infoButton" class="infoButton" href="#"><p ><span class="bg"></span><span class="base"></span><span class="text">Info</span></p></label>
+          <label id="cliButton" class="infoButton" style="left: 30px;" href="#"><p ><span class="bg"></span><span class="base"></span><span class="text">CLI-tool</span></p></label>
+          <label id="notaHiddenButton" class="infoButton" style="float:right; left: -15px; opacity:0;cursor:auto;" href="#"><p ><span class="bg"></span><span class="base"></span><span class="text">CLI-tool</span></p></label>
+        </div>  
+    <label for="imageLoader" id="selectButton" href="#"><p ><span class="bg"></span><span class="base"></span><span class="text">Select file</span></p></label>
+    <div class="menu-outline"></div>
+  </div>
+  <canvas id="imageCanvas">
+    Your browser does not support the HTML5 canvas tag.
+  </canvas>
+  
+
+  <script type="module" src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js" integrity="sha512-y3o0Z5TJF1UsKjs/jS2CDkeHN538bWsftxO9nctODL5W40nyXIbs0Pgyu7//icrQY9m6475gLaVr39i/uh/nLA==" crossorigin="anonymous"></script>
+  <script src="lib/codemirror.js"></script>
+  <link rel="stylesheet" href="lib/codemirror.css">
+  <script src="mode/clike/clike.js"></script>
+</body>
+
+
+</html>
