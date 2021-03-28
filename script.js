@@ -74,6 +74,17 @@ function modalDissapear() {
     }, 650);
 }
 
+function cliModalDissapear() {
+    climodal.classList.add("modal-dissapear");
+    climodalBG.classList.add("modalbg-dissapear");
+    setTimeout(() => {
+        climodalBG.style.display = "none";
+        climodalBG.classList.remove("modalbg-dissapear");
+        climodal.classList.remove("modal-dissapear");
+    }, 650);
+}
+
+
 function infoModalDissapear() {
     infomodal.classList.add("modal-dissapear");
     infomodalBG.classList.add("modalbg-dissapear");
