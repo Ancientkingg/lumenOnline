@@ -38,7 +38,7 @@ infospan.onclick = infoModalDissapear;
 infomodalBG.onclick = infoModalDissapear;
 document.getElementById("CLImodalClose").onclick = cliModalDissapear;
 climodalBG.onclick = cliModalDissapear;
-document.getElementById("howToUse").onclick = () => {modalAppear("First save the atlas you want to use as a picture. Secondly you want to colour in the pixels you want to be emissive, with the colour rgba(255,255,127,255) or #ffff7f in hex. Make sure to save it after editing and upload it to the website")}
+document.getElementById("howToUse").onclick = () => {modalAppear("First save the atlas you want to use as a picture. Secondly you want to colour in the pixels you want to be emissive, with the colour <code>rgba(255,255,127,255)</code> or <code>#ffff7f</code> in hex. Make sure to save it after editing and upload it to the website",false,"20%","20%")}
 document.getElementById("atlasbutton").onclick = atlasmodalAppear;
 document.getElementById("atlasmodalClose").onclick = atlasmodalDissapear;
 document.getElementById("atlasmodal").onclick = atlasmodalDissapear;
