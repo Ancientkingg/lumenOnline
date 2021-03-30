@@ -210,8 +210,16 @@ document.querySelectorAll('input[name="shaderType"]').forEach((elem) => {
 function saveZip() {
     let packmcmeta = '{"pack":{ "pack_format": 7, "description": "§cEmissive Textures by Ancientkingg"}}';
     zip.file('pack.mcmeta', packmcmeta);
-    let shaderType = document.querySelector('input[name="shaderType"]:checked').value;
-    if (shaderType = "other") shaderType = document.getElementById('shaderName').value
+    let checkedButton = document.querySelectorAll('input[name="shaderType"]');
+    let shaderType;
+    let button;
+    for (button of checkedButton) {
+        if (button.checked) {
+            shaderType = button.value;
+            break;
+        }
+    }
+    if (shaderType == "other") shaderType = document.getElementById('shaderName').value
     let shaderContents = cm.getValue();
     zip.file('assets/minecraft/shaders/core/' + shaderType + '.fsh', shaderContents);
     zip.generateAsync({ type: 'blob' }).then(function (blob) {
